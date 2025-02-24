@@ -1,7 +1,7 @@
 package com.example.MyGreetingApp.controller;
 
 
-import com.example.MyGreetingApp.services.GreetingService;
+import com.example.MyGreetingApp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
