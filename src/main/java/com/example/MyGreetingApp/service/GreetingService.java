@@ -42,7 +42,7 @@ public class GreetingService {
                 .orElseThrow(() -> new RuntimeException("Greeting not found with id: " + id));
     }
 
-    public List<Greeting> getAllGreetings() {
+    public List<Greeting> getAllGreeting() {
         return greetingRepository.findAll();
     }
 }
