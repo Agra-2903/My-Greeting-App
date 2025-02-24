@@ -61,5 +61,12 @@ public class GreetingController {
     public String deleteGreeting() {
         return "{\"message\": \"Hello, this is a DELETE request!\"}";
     }
+
+    // UC8: Deleting messages taking ID as input
+    @DeleteMapping("/{id}")
+    public String deleteGreeting(@PathVariable Long id) {
+        greetingService.deleteGreeting(id);
+        return "Greeting with ID " + id + " deleted successfully.";
+    }
 }
 
