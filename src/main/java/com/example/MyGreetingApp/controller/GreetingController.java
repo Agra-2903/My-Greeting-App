@@ -35,9 +35,10 @@ public class GreetingController {
         return greetingService.findGreetingById(id);
     }
 
+    // UC6: Displays list of all messages
     @GetMapping("/all")
-    public List<Greeting> getAllGreeting() {
-        return greetingService.getAllGreeting();
+    public List<Greeting> getAllGreetings() {
+        return greetingService.getAllGreetings();
     }
 
     @PostMapping
