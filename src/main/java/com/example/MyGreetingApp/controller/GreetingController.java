@@ -36,8 +36,8 @@ public class GreetingController {
     }
 
     @GetMapping("/all")
-    public List<Greeting> getAllGreetings() {
-        return greetingService.getAllGreetings();
+    public List<Greeting> getAllGreeting() {
+        return greetingService.getAllGreeting();
     }
 
     @PostMapping
