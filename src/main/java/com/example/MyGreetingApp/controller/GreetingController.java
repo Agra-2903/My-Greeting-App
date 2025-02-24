@@ -1,8 +1,11 @@
 package com.example.MyGreetingApp.controller;
 
 
+import com.example.MyGreetingApp.model.Greeting;
 import com.example.MyGreetingApp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/greeting")
@@ -19,11 +22,16 @@ public class GreetingController {
         return greetingService.getGreetingMessage();
     }
 
-    @GetMapping
-    public String getGreeting(
+    @GetMapping("/custom")
+    public Greeting getGreeting(
             @RequestParam(value = "firstName", required = false) String firstName,
             @RequestParam(value = "lastName", required = false) String lastName) {
         return greetingService.getGreetingMessage(firstName, lastName);
+    }
+
+    @GetMapping("/all")
+    public List<Greeting> getAllGreetings() {
+        return greetingService.getAllGreetings();
     }
 
     @PostMapping
